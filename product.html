@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Boxes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+
+    .product-box {
+      background-color: rgb(240, 150, 199);
+      border: 1px solid #ccc;
+      border-color: pink;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      padding: 15px;
+      width: 300px;
+      
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .product-box:hover {
+      background-color: #d86985;
+          }
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .price {
+      font-size: 16px;
+      color: #e53935;
+      font-weight: bold;
+    }
+
+    .standard-price {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    .dropdowns {
+      margin-top: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-top: 4px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .product-details {
+      margin-top: 10px;
+      display: none;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-box" onclick="toggleDetails(1)">
+    <div class="top-row">
+    
+    <div class="title">
+        <input type="radio" name="productOption" id="product1">
+       <label for="product1"> Unit 1 - 10% Off</label>
+    <div class="price">$9.00</div>
+    <div class="standard-price">Standard Price: $10.00</div></div></div>
+
+  <div class="dropdowns">
+    <div id="details1" class="product-details">
+    <label for="color">Color</label>
+    <select id="color">
+      <option value="">Select Color</option>
+      <option>Red</option>
+      <option>Blue</option>
+      <option>Green</option>
+    </select>
+
+    <label for="size">Size</label>
+    <select id="size">
+      <option value="">Select Size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+  </div>
+  </div>
+  </div>
+  <div class="product-box" onclick="toggleDetails(2)">
+<div class="top-row">
+    
+    <div class="title">
+        <input type="radio" name="productOption" id="product1">
+       <label for="product1"> Unit 1 - 10% Off</label></div>
+    <div class="price">$9.00</div>
+    <div class="standard-price">Standard Price: $10.00</div></div>
+
+  <div class="dropdowns">
+    <div id="details2" class="product-details">
+
+    <label for="color">Color</label>
+    <select id="color">
+      <option value="">Select Color</option>
+      <option>Red</option>
+      <option>Blue</option>
+      <option>Green</option>
+    </select>
+
+    <label for="size">Size</label>
+    <select id="size">
+      <option value="">Select Size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+  </div>
+  </div>
+  </div>
+
+  <div class="product-box" onclick="toggleDetails(3)">
+    <div class="top-row">
+    
+    <div class="title">
+        <input type="radio" name="productOption" id="product1">
+       <label for="product1"> Unit 1 - 10% Off</label></div>
+    <div class="price">$9.00</div>
+    <div class="standard-price">Standard Price: $10.00</div></div>
+
+  <div class="dropdowns">
+    <div id="details3" class="product-details">
+
+    <label for="color">Color</label>
+    <select id="color">
+      <option value="">Select Color</option>
+      <option>Red</option>
+      <option>Blue</option>
+      <option>Green</option>
+    </select>
+
+    <label for="size">Size</label>
+    <select id="size">
+      <option value="">Select Size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+  </div>
+  </div>
+  </div>
+
+    
+
+  <script>
+    function toggleDetails(productId) {
+      for (let i = 1; i <= 3; i++) {
+      document.getElementById("details" + i).style.display = "none";
+    }
+
+    
+    document.getElementById("details" + productId).style.display = "block";
+  }
+      
+  </script>
+
+</body>
+</html>
